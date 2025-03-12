@@ -143,7 +143,7 @@ while cont3 == "y" :
 
     print("Thank You")
     print("")
-    cont2 = input("Would you like to go again? (y/n): ").lower()
+    cont3 = input("Would you like to go again? (y/n): ").lower()
     print("")
     print("----------------------------------------------------------------")
     
