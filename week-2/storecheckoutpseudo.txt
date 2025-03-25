@@ -1,0 +1,48 @@
+START
+
+Step 1: Initialize total amount and cart list
+total amount = 0
+cart = []
+
+Step 2: Scan items
+WHILE more items to scan, DO
+item <- scanitem()
+price <- getprice(item)
+totalamount <- totalamount + price
+cart.append(item)
+END WHILE
+
+Step 3: Display total
+DISPLAY "Total Amount: $" + totalamount
+
+Step 4: Choose payment method
+DISPLAY "Select Payment Method: 1. Cash 2. Card"
+paymentmethod <- getuserinput()
+
+IF paymentmethod = 1 THEN
+DISPLAY "Enter cash amount: "
+cashgiven <- getuserinput()
+
+IF cashgiven >= totalamount THEN
+change <- cashgiven - totalamount
+DISPLAY "Change: $" + change
+PROCESS payment
+ELSE
+DISPLAY "Insufficient cash. Please enter a valid amount."
+RETURN TO payment selection 
+END IF
+
+ELSE IF paymentmethod = 2 THEN
+DISPLAY "Processing card payment..."
+PROCESS cardpayment()
+DISPLAY "Payment successful!"
+
+ELSE
+DISPLAY "Invalid payment method. Try again."
+RETURN TO payment selection
+END IF
+
+Step 5: Print receipt and complete transaction
+PRINT receipt(cart, totalamount)
+DISPLAY "Thank you for shopping!"
+END
