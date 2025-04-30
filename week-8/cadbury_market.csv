@@ -1,0 +1,18 @@
+EXPORT PRODUCTS
+International,Local
+Cocao Butter,Cocoa Powder
+Cake,
+Liquor,
+
+SEGMENTS
+Refreshment Beverages,Confectionary,Intermediate Cocoa Products
+Bournvita,Tom Tom,Cocoa Powder
+Hot Chocolate,Buttermint,Cocoa Liquor
+,,Cocoa Butter
+,,Cocoa Cake
+
+BRANDS
+Refreshment Beverages,Confectionery,Intermediate Cocoa Products
+Cadbury Bournvita,TomTom Classic,Cocoa Powder
+Cadbury 3-in-1 Hot Chocolate,TomTom Strawberry,Cocoa Butter
+,Buttermint,
